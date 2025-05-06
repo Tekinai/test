@@ -26,6 +26,6 @@ while ($true) {
         }
     }
     
-    # Intervalo de verificação (5 segundos)
+    # Intervalo de verificação (3 segundos)
     Start-Sleep -Seconds 3
 }
