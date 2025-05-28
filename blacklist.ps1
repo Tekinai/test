@@ -1,3 +1,41 @@
+$localImagePath = "$env:TEMP\SuperGeeks_1920x1080.jpg"
+
+# Baixa a imagem do GitHub (usando token se for repositório privado)
+$imageUrl = "https://raw.githubusercontent.com/Tekinai/test/refs/heads/main/SuperGeeks_1920x1080.jpg"
+Invoke-WebRequest -Uri $imageUrl -OutFile $localImagePath -UseBasicParsing
+
+# Define o papel de parede (método universal para Windows 10/11)
+Function Set-Wallpaper {
+    param (
+        [string]$ImagePath
+    )
+    Add-Type -TypeDefinition @"
+    using System;
+    using System.Runtime.InteropServices;
+    public class Wallpaper {
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        public static extern int SystemParametersInfo(int uAction, int uParam, string lpvParam, int fuWinIni);
+    }
+"@
+    [Wallpaper]::SystemParametersInfo(20, 0, $ImagePath, 3)
+}
+
+# Aplica a imagem
+Set-Wallpaper -ImagePath $localImagePath
+Write-Host "Papel de parede alterado com sucesso!" -ForegroundColor Green
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Lista negra de termos proibidos (personalize com suas palavras-chave)
 $blockedTerms = @("hack", "violência", "porno", "safada", "safadas", "xxx","nua", "pelada", "sem roupa", "hentai", "ecchi", "sensual", "gore", "multilação","decaptação", "multilado", "decaptado","xvideos", "pornhub", "redtube", "pornografia", "pinto", "buceta", "penis", "vagina", "peito", "peitos", "safadinha", "porra", "caralho", "vagabunda", "putaria", "xoxota", "putaria", "nazi", "holocausto", "only", "hitler" )
 
