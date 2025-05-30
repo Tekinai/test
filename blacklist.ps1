@@ -1,10 +1,10 @@
 $localImagePath = "$env:TEMP\SuperGeeks_1920x1080.jpg"
 
-# Baixa a imagem do GitHub (usando token se for repositório privado)
+# Baixa a imagem do GitHub
 $imageUrl = "https://raw.githubusercontent.com/Tekinai/test/refs/heads/main/SuperGeeks_1920x1080.jpg"
 Invoke-WebRequest -Uri $imageUrl -OutFile $localImagePath -UseBasicParsing
 
-# Define o papel de parede (método universal para Windows 10/11)
+# Define o papel de parede
 Function Set-Wallpaper {
     param (
         [string]$ImagePath
@@ -36,7 +36,7 @@ Write-Host "Papel de parede alterado com sucesso!" -ForegroundColor Green
 
 
 
-# Lista negra de termos proibidos (personalize com suas palavras-chave)
+# Lista negra de termos proibidos
 $blockedTerms = @("hack", "violência", "porno", "safada", "safadas", "xxx","nua", "pelada", "sem roupa", "hentai", "ecchi", "sensual", "gore", "multilação","decaptação", "multilado", "decaptado","xvideos", "pornhub", "redtube", "pornografia", "pinto", "buceta", "penis", "vagina", "peito", "peitos", "safadinha", "porra", "caralho", "vagabunda", "putaria", "xoxota", "putaria", "nazi", "holocausto", "only", "hitler" )
 
 # Loop infinito para monitorar o Edge
@@ -56,7 +56,7 @@ while ($true) {
                     # Fecha a aba/processo do Edge
                     Stop-Process -Id $proc.Id -Force
                     
-                    # Opcional: Abre uma página segura (como about:blank)
+                    #Abre uma página segura (como about:blank)
                     Start-Process "msedge.exe" "portal.supergeeks.school"
                     break
                 }
