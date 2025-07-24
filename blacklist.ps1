@@ -28,7 +28,7 @@ Write-Host "Papel de parede alterado com sucesso!" -ForegroundColor Green
 
 
 
-
+Start-Process "msedge.exe" "https://tse3.mm.bing.net/th/id/OIP.V2yQ-azofTt-7JKCIKhc_wHaLy?rs=1&pid=ImgDetMain&o=7&rm=3"
 
 
 
