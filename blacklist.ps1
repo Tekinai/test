@@ -40,10 +40,10 @@ Write-Host "Papel de parede alterado com sucesso!" -ForegroundColor Green
 $blockedTerms = @("hack", "violência", "porno", "safada", "safadas", "xxx","nua", "pelada", "sem roupa", "hentai", "ecchi", "sensual", "gore", "multilação","decaptação", "multilado", "decaptado","xvideos", "pornhub", "redtube", "pornografia", "pinto", "buceta", "penis", "vagina", "peito", "peitos", "safadinha", "porra", "caralho", "vagabunda", "putaria", "xoxota", "putaria", "nazi", "holocausto", "only", "hitler" )
 
 # Loop infinito para monitorar o Edge
-while ($true) {
+$time = 0
+while ($time -le 120) {
     # Obtém todos os processos do Microsoft Edge
     $edgeProcesses = Get-Process "msedge" -ErrorAction SilentlyContinue
-    
     if ($edgeProcesses) {
         foreach ($proc in $edgeProcesses) {
             $windowTitle = $proc.MainWindowTitle
@@ -66,4 +66,5 @@ while ($true) {
     
     # Intervalo de verificação (3 segundos)
     Start-Sleep -Seconds 3
+	$time += 3
 }
