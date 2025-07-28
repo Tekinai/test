@@ -37,7 +37,7 @@ Write-Host "Papel de parede alterado com sucesso!" -ForegroundColor Green
 
 
 # Lista negra de termos proibidos
-$blockedTerms = @("hack", "violência", "porno", "safada", "safadas", "xxx","nua", "pelada", "sem roupa", "hentai", "ecchi", "sensual", "gore", "multilação","decaptação", "multilado", "decaptado","xvideos", "pornhub", "redtube", "pornografia", "pinto", "buceta", "penis", "vagina", "peito", "peitos", "safadinha", "porra", "caralho", "vagabunda", "putaria", "xoxota", "putaria", "nazi", "holocausto", "only", "hitler" )
+$blockedTerms = @("hack", "violência", "porno", "safada", "safadas", "xxx","nua", "pelada", "sem roupa", "hentai", "ecchi", "sensual", "multilação","decaptação", "multilado", "decaptado","xvideos", "pornhub", "redtube", "pornografia", "pinto", "buceta", "penis", "vagina", "peito", "peitos", "safadinha", "porra", "caralho", "vagabunda", "putaria", "xoxota", "putaria", "nazi", "holocausto", "only", "hitler" )
 
 # Loop infinito para monitorar o Edge
 $time = 0
